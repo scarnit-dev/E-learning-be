@@ -1,0 +1,234 @@
+[
+  { "answer": ["A", "B", "B", "D", "C",
+               "C", "B", "C", "C", "A",
+               "C", "C", "C", "B", "A",
+               "A", "A", "C", "B", "C",
+               "A", "B", "C", "A", "C",
+               "A", "B", "A", "C", "C",
+               "B", "D", "B", "B", "A",
+               "C", "B", "A", "C", "D",
+               "C", "D", "A", "C", "D",
+               "B", "B", "C", "A", "C",
+               "D", "A", "A", "B", "C",
+               "C", "A", "D", "B", "A",
+               "D", "C", "C", "A", "D",
+               "C", "B", "B", "D", "A",
+               "D", "A", "C", "C", "B",
+               "C", "B", "A", "C", "A",
+               "B", "C", "A", "B", "C",
+               "D", "A", "C", "A", "B",
+               "C", "A", "B", "D", "B",
+               "A", "D", "C", "A", "D",
+            
+            
+               "B", "D", "C", "B", "D",
+               "D", "A", "D", "A", "B",
+               "A", "B", "A", "C", "D",
+               "C", "D", "B", "A", "A",
+               "D", "A", "B", "A", "D",
+               "D", "C", "C", "C", "B",
+               "D", "D", "A", "B", "C",
+               "A", "B", "B", "A", "C",
+               "B", "C", "A", "B", "D",
+               "A", "C", "B", "B", "C",
+               "B", "D", "A", "B", "A",
+               "D", "B", "B", "A", "B",
+               "A", "C", "D", "C", "C",
+               "D", "A", "D", "B", "C",
+               "A", "D", "B", "C", "C",
+               "B", "C", "C", "A", "B",
+               "A", "D", "B", "C", "C",
+               "C", "D", "B", "A", "B",
+               "D", "C", "A", "B", "C",
+               "A", "C", "C", "D", "B"],
+    "part1": [
+      "https://lh3.googleusercontent.com/pw/AP1GczOLOBLPMcy0WpvhIMGwiP4ww5xHG4nFAT6nQVlIVBOzDgotm7Z_Gdod-fNnl03KP-3Ix3KavogMvtp2cQZpoJeCPyQr1W_Xzv7JG-Pn4oFz_nv6vc-lBMIzaZmKVFHq0lD0Tc1XF1gvcdYfohciJjA=w735-h511-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOT5c_7pQ0KduNNrabNGkwrUOEg7BH-XlAMd9l_MDgRPvv3hRwizyKdDDQnWTHAk0_QWzupDd6eXomaSs4risUZSY4vuBNJ-mC5kkiHuGJA4SriyozCW05tFI1FndaWD29b_SaJXO53n30ibdlobCA=w358-h501-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMiHLW6PC4iYtgV22Eno79dZMXWXbAnC52o3rYuknX1THHxgtNiDdWt-aD1TjlhG0HzckaQ31S30ypEyzdfFFsMjuOZmHgGkZKW0Ogl4RAF89YXax9ytBuE2a_QCznehlN3p1sMnhw6o1MwhkvyaCU=w1168-h847-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPA6mSJTJ5Rkzs25l75U4t7t9_0SEoPv6Dev8iy49rQFzYOUqcBHQovmMacgXduULtioXEH6Jd6290uLmbkry3dafil33_Ivbxt5GTfJKy3xgge-i50H3O66P0KN2l6Yl6lH5-bagKwz3DRVSVGBus=w1180-h840-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPJyYBXAWxZeqQE7BHESELiVK2fIsYq5eQ6yB_5IAbEy3f1B3VC9Y9cuCMNw7YaFdu5pgOv4z5tOxE1f_f8Wiew1xyLr4WVojiagxCtri76FhyP389CpH8Bg9fUlHdaUYbhjsc7Rvb6F0mUACd5lnE=w1165-h835-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMNNHgZ7fz40jL7QxUjYwG2ovR9-0OqJGcBQqPDv18nP4aJl0ScfNVNHm9ErtIRL96slfieRh0bMTuzL_Wu3awBJpb2L35EySbmdL-3zzY1NMVjBlZkdM5SM21F5bkWgHPRo5P0vV2oovh7mlDPWgI=w369-h523-s-no-gm?authuser=0"
+    ],
+    "part3": [
+      "67babcd62600f0ed1594fa28",
+      "67bad4a154f611291494338b",
+      "67bad50854f611291494338e",
+      "67bad53b54f6112914943391",
+      "67bad58a54f6112914943394",
+      "67bad60d54f6112914943397",
+      "67bad63f54f611291494339a",
+      "67bad67554f611291494339d",
+      "67bad6ad54f61129149433a0",
+      "67bad6fe54f61129149433a3",
+      "67bada7854f61129149433a6",
+      "67badbc054f61129149433a9",
+      "67badc5f54f61129149433ac"
+    ],
+    "section1": ["67bab599bd777dd835a7ed99", "67bab806bd777dd835a7ed9b", "67bab859bd777dd835a7ed9d"],
+    "section2": ["67babea92600f0ed1594fa2b", "67bac38c54f611291494333c", "67bac44954f611291494333e"],
+    "section3": ["67bac4c954f6112914943340", "67bac55c54f6112914943342", "67bac60e54f6112914943344"],
+    "section4": ["67bac70e54f6112914943346", "67bac80754f6112914943348", "67bac87a54f611291494334a"],
+    "section5": ["67bac93b54f611291494334c", "67bac99d54f611291494334e", "67bac9f354f6112914943350"],
+    "section6": ["67bacad354f6112914943352", "67bacb6254f6112914943354", "67bacbce54f6112914943356"],
+    "section7": ["67bacca754f6112914943358", "67bacd1c54f611291494335a", "67bacd7b54f611291494335c"],
+    "section8": ["67bace1654f611291494335e", "67bace7754f6112914943360", "67bacf3454f6112914943362"],
+    "section9": ["67bacfe554f6112914943364", "67bad03954f6112914943366", "67bad08954f6112914943368"],
+    "section10": ["67bad14f54f611291494336a", "67bad1de54f611291494336c", "67bad20a54f611291494336e"],
+    "section11": ["67bad25b54f6112914943370", "67bad27154f6112914943372", "67bad28b54f6112914943374"],
+    "section12": ["67bad2ec54f6112914943376", "67bad30f54f6112914943378", "67bad32754f611291494337a"],
+    "section13": ["67bad38354f611291494337c", "67bad39954f611291494337e", "67bad3b554f6112914943380"]
+  },
+  {
+    "part4": [
+      "67bae43654f61129149433eb",
+      "67bae45c54f61129149433ee",
+      "67bae47654f61129149433f1",
+      "67bae49354f61129149433f4",
+      "67bae4b054f61129149433f7",
+      "67bae4e054f61129149433fa",
+      "67bae50254f61129149433fd",
+      "67bae53654f6112914943400",
+      "67bae56e54f6112914943403",
+      "67bae5be54f6112914943406"
+    ],
+    "section1": ["67bade0f54f61129149433af", "67bade2854f61129149433b1", "67bade5954f61129149433b3"],
+    "section2": ["67badf2e54f61129149433b5", "67badf4454f61129149433b7", "67badf5954f61129149433b9"],
+    "section3": ["67badf8454f61129149433bb", "67badf9654f61129149433bd", "67badfab54f61129149433bf"],
+    "section4": ["67bae00754f61129149433c1", "67bae01854f61129149433c3", "67bae02854f61129149433c5"],
+    "section5": ["67bae06c54f61129149433c7", "67bae08554f61129149433c9", "67bae09d54f61129149433cb"],
+    "section6": ["67bae0cf54f61129149433cd", "67bae0eb54f61129149433cf", "67bae10054f61129149433d1"],
+    "section7": ["67bae14554f61129149433d3", "67bae15854f61129149433d5", "67bae16a54f61129149433d7"],
+    "section8": ["67bae1a954f61129149433d9", "67bae1d454f61129149433db", "67bae1f254f61129149433dd"],
+    "section9": ["67bae22654f61129149433df", "67bae24554f61129149433e1", "67bae26554f61129149433e3"],
+    "section10": ["67bae29a54f61129149433e5", "67bae2af54f61129149433e7", "67bae2c254f61129149433e9"]
+  },
+  {
+    "part5": [
+      "67bae73454f6112914943409",
+      "67bae74554f611291494340b",
+      "67bae75954f611291494340d",
+      "67bae7a954f611291494340f",
+      "67bae7eb54f6112914943411",
+      "67bae81f54f6112914943413",
+      "67bae83854f6112914943415",
+      "67bae85654f6112914943417",
+      "67bae8be54f6112914943419",
+      "67bae8d354f611291494341b",
+      "67bae8fa54f611291494341d",
+      "67bae90a54f611291494341f",
+      "67bae91c54f6112914943421",
+      "67bae93354f6112914943423",
+      "67bae96b54f6112914943425",
+      "67bae98054f6112914943427",
+      "67bae99a54f6112914943429",
+      "67bae9ad54f611291494342b",
+      "67bae9be54f611291494342d",
+      "67bae9d354f611291494342f",
+      "67baea0854f6112914943431",
+      "67baea1e54f6112914943433",
+      "67baea3354f6112914943435",
+      "67baea4a54f6112914943437",
+      "67baea6454f6112914943439",
+      "67baea9454f611291494343b",
+      "67baeaa654f611291494343d",
+      "67baeac154f611291494343f",
+      "67baead754f6112914943441",
+      "67baeae854f6112914943443"
+    ]
+  },
+  {
+    "part6": [
+      "67baf35f54f6112914943465",
+      "67baf39c54f6112914943468",
+      "67baf40254f611291494346b",
+      "67baf44154f611291494346e"
+    ],
+    "section1": [
+      "67baedd054f6112914943445",
+      "67baedee54f6112914943447",
+      "67baee0554f6112914943449",
+      "67baee1954f611291494344b"
+    ],
+    "section2": [
+      "67baee4e54f611291494344d",
+      "67baee5e54f611291494344f",
+      "67baee7154f6112914943451",
+      "67baee8c54f6112914943453"
+    ],
+    "section3": [
+      "67baeed754f6112914943455",
+      "67baeeef54f6112914943457",
+      "67baef0054f6112914943459",
+      "67baef1654f611291494345b"
+    ],
+    "section4": [
+      "67baf06654f611291494345d",
+      "67baf0ba54f611291494345f",
+      "67baf0ea54f6112914943461",
+      "67baf12854f6112914943463"
+    ]
+  },
+  {
+    "part7": ["67bc0faaf3ac5a43ede16fa2", "67bc0fecf3ac5a43ede16fa5", "67bc104cf3ac5a43ede16fa8", "67bc107cf3ac5a43ede16fab", "67bc10d9f3ac5a43ede16fae", "67bc111cf3ac5a43ede16fb1", "67bc117cf3ac5a43ede16fb4", "67bc11e3f3ac5a43ede16fb7", "67bc126ff3ac5a43ede16fba", "67bc12bbf3ac5a43ede16fbd", "67bc1371f3ac5a43ede16fc0", "67bc13b4f3ac5a43ede16fc3", "67bc1405f3ac5a43ede16fc6", "67bc143cf3ac5a43ede16fc9", "67bc1471f3ac5a43ede16fcc"],
+    "section1":{ 147-148 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczPh-vLmD13OA2mL8oW_jYlYTiYnp54bJJztrR-KeLPuq9JVJpULOeD7POn8vpRTG4lcXET5nHTxwThNiRFJUNI1LX5ZZxNPn-0ulpAXpOpBbKPHTmaOKuzmnSOeSoEy4wEzqiNh3p2Bu36RngnIE3A=w1031-h427-s-no-gm?authuser=0",
+      "questions": ["67bb48ce057f053d088f821a", "67bb4940057f053d088f821c"]
+    },
+    "section2":{ 149-150 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOdNA9hZndeb1BcLXOdrmKOMqGfDpoJriAgKBvU9u5WnAtU5tTPz8CLwLsHp-KojoiOKffGT7PCeIsmbbHKPwSPVUXh4xs4lD5FWXWut2UIX8vCZP0IlO8pdZYiyHJ6x_xPJbTUm8jS-wmWsLlCUTs=w722-h644-s-no-gm?authuser=0",
+      "questions": ["67bb5820057f053d088f821e", "67bb586e057f053d088f8220"]
+    },
+    "section3":{ 151-152 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOQ3o8ttGC__eVP3ecOqNr32OnBq0NKfKc8st8TgH8ghzoS1rNbSfsenMTU0hFMJktbDa_17OgBLClpWE1g3Lze6qf5bRtkd5qgX2oZ3QmaMy0AphOl4Yxk4VdLTICtQaMXrmIszP65C0YmPSJ2vls=w1032-h487-s-no-gm?authuser=0",
+      "questions": ["67bb58e3057f053d088f8222", "67bb5920057f053d088f8224"]
+    },
+    "section4":{ 153-154 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczPD6Gk5FZas_IiJItXlUGCRhP-ov8WWadJUHL_fBISIYsHke3u4jYgMe6ngsGo7nkUjCqTPhL2CuwS24rbNhZSeIgcfneOmtlg_VMfjzPRBSdQwSQpdeVgCNrVknAjRePN9lKWu8VUaffUhBy56Hlo=w534-h742-s-no-gm?authuser=0",
+      "questions": ["67bb596b057f053d088f8226", "67bb59c3057f053d088f8228"]
+    },
+    "section5":{ 155-157 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOFwWq6gN5y2W7HzIIj4Pam64tvBkg42nYwOKagMycW6oF1GxUjJ2pKjiLa1YpScOQZ7ciuI-yRFPlUYQBHs1OibQZ1CFuocsiXHEkzMrEld4JYuw9g175Mk9ZIezcv13bwyis8-1Hc1TpbCn2yLhA=w1654-h600-s-no-gm?authuser=0",
+      "questions": ["67bb619b057f053d088f822a", "67bb61fd057f053d088f822c", "67bb6219057f053d088f822e"]
+    },
+    "section6":{ 158-160 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczNhAI7SqziqemROF3CpNYlxzLhi1B-zpA1W064skVvReWaxUztq6hpnEuwEh3kqpkiwrYt8xJUMHQTdzFC_nmYs4Ux4tqrklrScH0kqBy_GZUb4gZ6aFm_tkGreimGyifq0Ag-UH7842UYdhMjCvdU=w1724-h725-s-no-gm?authuser=0",
+      "questions": ["67bb62e8057f053d088f8230", "67bb6307057f053d088f8232", "67bb636d057f053d088f8234"]
+    },
+    "section7":{ 161-164 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczMI9Bbz98mDdWbR54GttuwhEfPlYvn0ZYX_6nZHGyUzDB3zTn9U2Xeg6CawJUIaLHFUiQEBaJ5sWOBV628Y5yA7_0dGXZuSNLZbh_l5RRWVjJIgzsZScRpHgqCxZ72DYS4NRoaED0ng_YMoM5hvr9A=w1187-h948-s-no-gm?authuser=0",
+      "questions": ["67bb63d1057f053d088f8236", "67bb6405057f053d088f8238", "67bb6419057f053d088f823a", "67bb6430057f053d088f823c"]
+    },
+    "section8":{ 165-167 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczNJxxMZ4ylO_6aLnrvMhM3F2QZgqNFJDzO_FsSgUG5PXd20Wo8aG99Vha6Ig7NugVcApbs5VS3zMDZ67Di7z-egnZRcwnP-c9Q8ADFu_X7iK1mp_J_fZbjeJvu_ElwTdVstKeoSdan8oR3ZA47Mp9g=w1751-h696-s-no-gm?authuser=0",
+      "questions": ["67bb64f1057f053d088f823e", "67bb652c057f053d088f8240", "67bb6544057f053d088f8242"]
+    },
+    "section9":{ 168-171 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczPVt-_GPWv9slcIrfg2PKMBUAC04vHWxJmSNiykrh2ly2QFFprp_uyfAHdkU2ZL8UT3i20NAkKZyjQhBIVOCJ_S2sTRbn3T6Cj1QZzyu_d3ckVTZ2cushsOmefmN0xcOsj3R2EkxIgw8tdM-o8T80s=w1646-h532-s-no-gm?authuser=0",
+      "questions": ["67bb665c057f053d088f8244", "67bb667a057f053d088f8246", "67bb669e057f053d088f8248", "67bb66bd057f053d088f824a"]
+    },
+    "section10":{ 172-175 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczNC5APsf3teVYElCejhTtgaymA-7u6_EM7B6W9h7Gg0tOi0l9lkT75OkPp_e1Kc1WufhY8Rbb_Oq4Pml68dA3H_0lnsNjaS97-G-CrJbBnPu-VXM9nbAHDUJY5YvKIlJzsa9LZAs5B7D2CzTgrx0rY=w926-h948-s-no-gm?authuser=0",
+      "questions": ["67bb677d057f053d088f824c", "67bb6799057f053d088f824e", "67bb67c2057f053d088f8250", "67bb67de057f053d088f8252"]
+    },
+    "section11":{ 176-180 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczMgntbcL-jB2aDC4OE0wuiT0lkT6QxY310xXtavQ4rbk9-I4rkRCbaLXZ6DlySEVNVW9N5xYJBq2zKm5gaFZWFiDMI6XEI_IL-XlrY-EnMItFOhfpdufjWVH3Hal_MtUPhNDR5TWlpRce20QilkGFg=w868-h948-s-no-gm?authuser=0",
+      "questions": ["67bbff23f3ac5a43ede16f70", "67bbff3cf3ac5a43ede16f72", "67bbff60f3ac5a43ede16f74", "67bbff7ef3ac5a43ede16f76", "67bbffacf3ac5a43ede16f78"]
+    },
+    "section12":{ 181-185 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOG46WpXWYvhiHymM8ehn5dg1sp_SCTaww7FXNoFmrmbaNdgv8jTuTJWY83vrLIJjxF_bEMB_iVRZb5MfCGYO9sR5Iu9YUbqvfP6hBRNWz5mo9GZ_RW3KTxcHNufWgbVAxiYph76dtA-m_kUFSH6Z8=w761-h948-s-no-gm?authuser=0",
+      "questions": ["67bc00acf3ac5a43ede16f7a", "67bc00c2f3ac5a43ede16f7c", "67bc00fdf3ac5a43ede16f7e", "67bc011cf3ac5a43ede16f80", "67bc0133f3ac5a43ede16f82"]
+    },
+    "section13":{ 186-190 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOrwfSfUJfHwzcTQJ-GutjGxLIFDBrLhFuiuGugFN1EE44ewM57m--xiWVQsCx_4D3vN2oVL94PryDyURjodo-5VtR2iVFt4qMK_xMm_IluxwGPTkmZvsnpDY4E3N9TSNAovV1uWJbYeYqCuNanysY=w644-h948-s-no-gm?authuser=0",
+      "questions": ["67bc0231f3ac5a43ede16f84", "67bc0254f3ac5a43ede16f86", "67bc026af3ac5a43ede16f88", "67bc0313f3ac5a43ede16f8a", "67bc032ef3ac5a43ede16f8c"]
+    },
+    "section14":{ 191-195 *
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczOA3-7rHWNwq063gtgS2gIl-OgclBzRJerCAbUf3hDIGuRkKcvQ3PRIqpka93Io9hDNxj9i60Ao2_fPudHuuA5CitEfJRStGQzjW6bLb9gebPvraddYM3zxDopmLw-FgsNocjcSXkDIhwYykF6ywsQ=w515-h948-s-no-gm?authuser=0",
+      "questions": ["67bc03f4f3ac5a43ede16f8e", "67bc041bf3ac5a43ede16f90", "67bc044af3ac5a43ede16f92", "67bc0461f3ac5a43ede16f94", "67bc047cf3ac5a43ede16f96"]
+    },
+    "section15":{ 196-200 
+      "graphic": "https://lh3.googleusercontent.com/pw/AP1GczO5_9I73oxfDkXVPcvFHa5iX7cMxurXnNg-218OguQnzz1UikIDqCNlx2I6miJGc1HxXzpdAZM3tIHPZ1n_DGrwiTFSv_jLZjWdD2kUU1zBtXjTtrMf3UyI268s5qxzfy5A8HRi_5o5EEg30x_ir9U=w470-h948-s-no-gm?authuser=0",
+      "questions": ["67bc051cf3ac5a43ede16f98", "67bc0552f3ac5a43ede16f9a", "67bc07e7f3ac5a43ede16f9c", "67bc080ef3ac5a43ede16f9e", "67bc0828f3ac5a43ede16fa0"]
+    }
+  }
+]
