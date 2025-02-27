@@ -7,6 +7,7 @@ import authRouter from './routes/auth.routes.js';
 import courseRouter from './routes/course.routes.js';
 import testToeicRouter from './routes/testToeic.routes.js';
 import flashcardRouter from './routes/flashCard.routes.js';
+import vocabularyRouter from './routes/vocabulary.routes.js';
 
 
 dotenv.config();
@@ -33,6 +34,8 @@ app.use('/api/course', courseRouter);
 app.use('/api/test', testToeicRouter);
 
 app.use('/api/flashcard', flashcardRouter);
+
+app.use('/api/vocab', vocabularyRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello world!');
