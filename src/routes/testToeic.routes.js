@@ -11,7 +11,5 @@ testToeicRouter.post('/add-question', testToeicController.addQuestion);
 
 testToeicRouter.get('/get-one-toeic/:id', testToeicController.getOneToeic);
 
-testToeicRouter.post('/take-full', testToeicController.takeFullToeic);
-
 
 export default testToeicRouter;

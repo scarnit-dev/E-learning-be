@@ -9,6 +9,8 @@ authRouter.post('/login', authController.login);
 
 authRouter.post('/refresh', authController.requestRefreshToken);
 
-authRouter.delete('/logout', authMiddlewares.verifyToken, authController.logout);
+authRouter.post('/logout', authMiddlewares.verifyToken, authController.logout);
+
+authRouter.get('/google', authMiddlewares.getGoogleData, authController.googleLogin);
 
 export default authRouter;

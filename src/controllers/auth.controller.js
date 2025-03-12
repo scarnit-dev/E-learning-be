@@ -2,12 +2,13 @@ import bcrypt from 'bcryptjs';
 import jsonwebtoken from 'jsonwebtoken';
 import User from '../models/User.js';
 import RefreshToken from '../models/RefreshToken.js';
+import { response } from 'express';
 
 const accessTokenGenerator = (payload) => {
-  return jsonwebtoken.sign(payload, process.env.ACCESS_SECRET_TOKEN, { expiresIn: '30m' });
+  return jsonwebtoken.sign(payload, process.env.ACCESS_SECRET_TOKEN, { expiresIn: '30d' });
 };
 const refreshTokenGenerator = (payload) => {
-  return jsonwebtoken.sign(payload, process.env.REFRESH_SECRET_TOKEN, { expiresIn: '15d' });
+  return jsonwebtoken.sign(payload, process.env.REFRESH_SECRET_TOKEN, { expiresIn: '31d' });
 };
 
 const authController = {
@@ -18,7 +19,20 @@ const authController = {
       const hashed = await bcrypt.hash(req.body.password, salt);
       const newUser = new User({ ...req.body, password: hashed });
       const user = await newUser.save();
-      res.status(201).json(user);
+
+      const accessToken = accessTokenGenerator({ id: user._id, admin: user.admin });
+      const refreshToken = refreshTokenGenerator({ id: user._id, admin: user.admin });
+
+      res.cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+        secure: false,
+        sameSite: 'None'
+      });
+
+      // Save token
+      await new RefreshToken({ token: refreshToken, userId: user._id }).save();
+
+      res.status(201).json({user, accessToken});
     } catch (error) {
       res.status(500).json(error);
     }
@@ -40,21 +54,52 @@ const authController = {
       res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
         secure: false,
-        sameSite: 'Strict'
+        sameSite: 'None'//// *****
       });
 
       // Save token
       await new RefreshToken({ token: refreshToken, userId: user._id }).save();
 
-      return res.status(200).json({ message: 'Login successfully', accessToken });
+      return res.status(200).json({ user, accessToken });
     } catch (error) {
       res.status(500).json(error);
     }
   },
+  googleLogin: async(req, res)=>{
+    try {
+      const {email, name, picture} = req.data;
+      let user = await User.findOne({email});
+      if(!user){
+        const newUser = new User({name, email, avatar: picture});
+        user = await newUser.save();
+      }
+      user.avatar = picture;
+      await user.save();
+
+      const accessToken = accessTokenGenerator({ id: user._id, admin: user.admin });
+      const refreshToken = refreshTokenGenerator({ id: user._id, admin: user.admin });
+
+      res.cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+        secure: false,
+        sameSite: "None",
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+      });
+
+      // Save token
+      await new RefreshToken({ token: refreshToken, userId: user._id }).save();
+
+      return res.status(200).json({ user, accessToken });
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  },
+
   // REQUEST REFRESH TOKEN
   requestRefreshToken: async (req, res) => {
     try {
       const refreshToken = req.cookies.refreshToken;
+      console.log(req.cookies)
       if (!refreshToken) return res.status(404).json({ message: "You're not authenticated!" });
 
       const savedToken = await RefreshToken.findOne({ token: refreshToken });
@@ -91,6 +136,7 @@ const authController = {
       res.status(500).json(error)
     }
   }
+
 };
 export default authController;
 

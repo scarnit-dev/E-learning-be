@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     avatar: { type: String, default: '' },
     sub: { type: String, default: '' },
     targetScore: { type: Number, default: 0 },
-    examDate: { type: Date, default: Date.now },
+    examDate: { type: String, default: '' },
     flashcards: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Flashcard' }],
     testResults: [{ type: mongoose.Schema.Types.ObjectId, ref: 'TestResult' }],
     enrolledCourses: [{ type: mongoose.Schema.ObjectId, ref: 'Course' }]

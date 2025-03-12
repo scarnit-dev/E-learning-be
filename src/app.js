@@ -8,6 +8,8 @@ import courseRouter from './routes/course.routes.js';
 import testToeicRouter from './routes/testToeic.routes.js';
 import flashcardRouter from './routes/flashCard.routes.js';
 import vocabularyRouter from './routes/vocabulary.routes.js';
+import userRouter from './routes/user.routes.js';
+import testResultRouter from './routes/testResult.routes.js';
 
 
 dotenv.config();
@@ -22,7 +24,10 @@ mongoose
     console.log('Could not connect to MongoDB', err);
   });
 
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
 app.use(cookieParser());
 app.use(express.json());
 
@@ -37,8 +42,8 @@ app.use('/api/flashcard', flashcardRouter);
 
 app.use('/api/vocab', vocabularyRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello world!');
-});
+app.use('/api/user', userRouter);
+
+app.use('/api/testResult', testResultRouter);
 
 export default app;
