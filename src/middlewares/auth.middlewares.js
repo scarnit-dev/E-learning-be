@@ -1,7 +1,6 @@
 import jsonwebtoken from 'jsonwebtoken';
 
-const authMiddlewares = {
-  verifyToken: (req, res, next) => {
+const authMiddlewares = {verifyToken: (req, res, next) => {
     const accessToken = req.headers.token;
     if (accessToken) {
       const token = accessToken.split(' ')[1];

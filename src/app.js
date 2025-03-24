@@ -10,6 +10,7 @@ import flashcardRouter from './routes/flashCard.routes.js';
 import vocabularyRouter from './routes/vocabulary.routes.js';
 import userRouter from './routes/user.routes.js';
 import testResultRouter from './routes/testResult.routes.js';
+import blogRouter from './routes/blog.routes.js';
 
 
 dotenv.config();
@@ -45,5 +46,7 @@ app.use('/api/vocab', vocabularyRouter);
 app.use('/api/user', userRouter);
 
 app.use('/api/testResult', testResultRouter);
+
+app.use('/api/blog', blogRouter)
 
 export default app;

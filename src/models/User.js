@@ -12,7 +12,9 @@ const userSchema = new mongoose.Schema(
     examDate: { type: String, default: '' },
     flashcards: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Flashcard' }],
     testResults: [{ type: mongoose.Schema.Types.ObjectId, ref: 'TestResult' }],
-    enrolledCourses: [{ type: mongoose.Schema.ObjectId, ref: 'Course' }]
+    enrolledCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }],
+    blog: [{type: mongoose.Schema.Types.ObjectId, ref: 'Blog'}],
+    savedBlog: [{type: mongoose.Schema.Types.ObjectId, ref: 'Blog'}]
   },
   { timestamps: true }
 );
