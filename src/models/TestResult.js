@@ -4,7 +4,9 @@ const testResultSchema = new mongoose.Schema(
   {
     score: { type: Number, required: true },
     timeSpent: { type: Number, required: true },
-    correctSum: { type: Number, required: true },
+    correct: { type: Number, required: true },
+    wrong: { type: Number, required: true },
+    skip: { type: Number, required: true },
     test: { type: mongoose.Schema.Types.ObjectId, ref: 'ToeicTest', required: true },
     userAnswer: {
       type: [String],

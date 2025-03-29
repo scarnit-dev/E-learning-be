@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const ToeicTestSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  name: { type: String, required: true},
   audio: { type: String, required: true },
   publishYear: { type: Number, required: true },
   answer: {

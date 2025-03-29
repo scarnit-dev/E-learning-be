@@ -8,4 +8,6 @@ testResultRouter.post('/take-full', authMiddlewares.verifyToken, testResultContr
 
 testResultRouter.get('/getAll', authMiddlewares.verifyToken, testResultController.getALL);
 
+testResultRouter.get('/:id', authMiddlewares.verifyToken, testResultController.getOne)
+
 export default testResultRouter;

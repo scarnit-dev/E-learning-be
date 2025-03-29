@@ -37,7 +37,7 @@ app.use('/api/auth', authRouter);
 
 app.use('/api/course', courseRouter);
 
-app.use('/api/test', testToeicRouter);
+app.use('/api/test-toeic', testToeicRouter);
 
 app.use('/api/flashcard', flashcardRouter);
 

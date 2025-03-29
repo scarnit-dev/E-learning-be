@@ -59,6 +59,14 @@ const testToeicController = {
     } catch (error) {
       res.status(500).json(error);
     }
+  },
+  getTestsByYear: async (req, res) =>{
+    try {
+      const tests = await ToeicTest.find().select(['image', 'name', 'publishYear']);
+      res.status(200).json({tests})
+    } catch (error) {
+      res.status(500).json({error})
+    }
   }
 };
 
