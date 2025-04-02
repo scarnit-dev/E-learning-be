@@ -1,14 +1,16 @@
 import { Router } from "express";
 import flashcardController from "../controllers/flashcard.controller.js";
+import authMiddlewares from "../middlewares/auth.middlewares.js";
+import flashcardMiddlewares from "../middlewares/flashcard.middlewares.js";
 
 const flashcardRouter = Router();
 
-flashcardRouter.post('/add', flashcardController.add);
+flashcardRouter.post('/', authMiddlewares.verifyToken, flashcardController.add);
 
-flashcardRouter.get('/get/:id', flashcardController.get);
+flashcardRouter.get('/', authMiddlewares.verifyToken, flashcardController.get);
 
-flashcardRouter.patch('/update', flashcardController.update);
+flashcardRouter.patch('/', authMiddlewares.verifyToken, flashcardMiddlewares.verifyOwner, flashcardController.update);
 
-flashcardRouter.delete('/delete/:uid/:fid', flashcardController.delete);
+flashcardRouter.delete('/:id', authMiddlewares.verifyToken, flashcardController.delete);
 
 export default flashcardRouter;

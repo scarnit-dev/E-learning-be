@@ -6,8 +6,8 @@ const flashcardController = {
   // POST
   add: async (req, res) => {
     try {
-      const { userId, ...other } = req.body;
-      const newFlashcard = new Flashcard(other);
+      const userId = req.user.id;
+      const newFlashcard = new Flashcard(req.body);
       const savedFlashcard = await newFlashcard.save();
       const userDoc = await User.findById(userId);
       await userDoc.updateOne({ $push: { flashcards: savedFlashcard._id } });
@@ -19,12 +19,12 @@ const flashcardController = {
   // GET
   get: async (req, res) => {
     try {
-      const user = await User.findById(req.params.id).populate('flashcards');
+      const user = await User.findById(req.user.id).populate('flashcards');
       const flashcards = user.flashcards.map((flashcard) => {
         const flashToObj = flashcard.toObject();
         return { ...flashToObj, vocabulary: flashToObj.vocabulary.length };
       });
-      res.status(200).json({ message: 'Successfully!', flashcards });
+      res.status(200).json(flashcards);
     } catch (error) {
       res.status(500).json({ error });
     }
@@ -47,10 +47,9 @@ const flashcardController = {
   //bulkWrite(): co the su dung trong truong hop nhieu document cha hon
   delete: async(req, res)=>{
     try {
-      const {uid, fid} = req.params;
-      console.log(uid);
-      await User.findByIdAndUpdate(uid, { $pull: { flashcards: fid } });
-      const deletedFlashcard = await Flashcard.findByIdAndDelete(fid);
+      const {id} = req.params;
+      await User.findByIdAndUpdate(req.user.id, { $pull: { flashcards: id } });
+      const deletedFlashcard = await Flashcard.findByIdAndDelete(id);
       await Promise.all(deletedFlashcard.vocabulary.map(vocab => Vocabulary.findByIdAndDelete(vocab)));
       res.status(200).json({message: 'Successfully!'});
     } catch (error) {

@@ -6,11 +6,11 @@ import cookieParser from 'cookie-parser';
 import authRouter from './routes/auth.routes.js';
 import courseRouter from './routes/course.routes.js';
 import testToeicRouter from './routes/testToeic.routes.js';
-import flashcardRouter from './routes/flashCard.routes.js';
 import vocabularyRouter from './routes/vocabulary.routes.js';
 import userRouter from './routes/user.routes.js';
 import testResultRouter from './routes/testResult.routes.js';
 import blogRouter from './routes/blog.routes.js';
+import flashcardRouter from './routes/flashcard.routes.js';
 
 
 dotenv.config();

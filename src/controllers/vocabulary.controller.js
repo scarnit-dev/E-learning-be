@@ -1,4 +1,5 @@
 import Flashcard from '../models/Flashcard.js';
+import User from '../models/User.js';
 import Vocabulary from '../models/Vocabulary.js';
 
 const vocabularyController = {
@@ -31,7 +32,7 @@ const vocabularyController = {
   get: async (req, res) => {
     try {
       const flashcard = await Flashcard.findById(req.params.id).populate('vocabulary');
-      res.status(200).json({ message: 'Successfully!', vocabulary: flashcard.vocabulary });
+      res.status(200).json(flashcard);
     } catch (error) {
       res.status(500).json(error);
     }
