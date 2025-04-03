@@ -33,20 +33,20 @@ app.use(cookieParser());
 app.use(express.json());
 
 // ROUTES
-app.use('/api/auth', authRouter);
+app.use('/v1/auth', authRouter);
 
-app.use('/api/course', courseRouter);
+app.use('/v1/course', courseRouter);
 
-app.use('/api/test-toeic', testToeicRouter);
+app.use('/v1/test-toeic', testToeicRouter);
 
-app.use('/api/flashcard', flashcardRouter);
+app.use('/v1/flashcard', flashcardRouter);
 
-app.use('/api/vocab', vocabularyRouter);
+app.use('/v1/vocab', vocabularyRouter);
 
-app.use('/api/user', userRouter);
+app.use('/v1/user', userRouter);
 
-app.use('/api/testResult', testResultRouter);
+app.use('/v1/testResult', testResultRouter);
 
-app.use('/api/blog', blogRouter)
+app.use('/v1/blog', blogRouter)
 
 export default app;
