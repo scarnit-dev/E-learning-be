@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true, unique: true },
     password: String,
     admin: { type: Boolean, default: false },
-    avatar: { type: String, default: '' },
+    avatar: { type: String, default: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541' },
     sub: { type: String, default: '' },
     targetScore: { type: Number, default: 0 },
     examDate: { type: String, default: '' },

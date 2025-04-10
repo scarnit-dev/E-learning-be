@@ -12,7 +12,6 @@ import testResultRouter from './routes/testResult.routes.js';
 import blogRouter from './routes/blog.routes.js';
 import flashcardRouter from './routes/flashcard.routes.js';
 
-
 dotenv.config();
 const app = express();
 

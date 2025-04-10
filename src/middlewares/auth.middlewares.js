@@ -22,7 +22,6 @@ const authMiddlewares = {
   },
   getGoogleData: async (req, res, next) => {
     try {
-      console.log(req.headers);
       const access_token = req.headers.authorization.split(' ')[1];
       
       const data = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
