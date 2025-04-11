@@ -2,7 +2,7 @@ import app from './src/app.js';
 
 const port = process.env.PORT || 3000;
 
-app.use('/', (req, res)=>{
+app.get('/', (req, res)=>{
   res.send('This is TINN api!')
 })
 
