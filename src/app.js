@@ -24,10 +24,12 @@ mongoose
     console.log('Could not connect to MongoDB', err);
   });
 
-app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 
@@ -46,6 +48,6 @@ app.use('/v1/user', userRouter);
 
 app.use('/v1/testResult', testResultRouter);
 
-app.use('/v1/blog', blogRouter)
+app.use('/v1/blog', blogRouter);
 
 export default app;
