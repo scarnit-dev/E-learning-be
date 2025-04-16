@@ -5,7 +5,7 @@ import User from '../models/User.js';
 import redis from '../libs/redis.js';
 
 const accessTokenGenerator = (payload) => {
-  return jsonwebtoken.sign(payload, process.env.ACCESS_SECRET_TOKEN, { expiresIn: '30d' });
+  return jsonwebtoken.sign(payload, process.env.ACCESS_SECRET_TOKEN, { expiresIn: '31d' });
 };
 const refreshTokenGenerator = (payload) => {
   return jsonwebtoken.sign(payload, process.env.REFRESH_SECRET_TOKEN, { expiresIn: '31d' });
@@ -33,7 +33,7 @@ const authController = {
       });
 
       // Save token
-      await redis.set(refreshToken, user._id);
+      await redis.set(refreshToken, user._id, {ex: 60 * 60 * 24 * 31});
 
       res.status(201).json({ user, accessToken });
     } catch (error) {
@@ -61,7 +61,7 @@ const authController = {
       });
 
       // Save token
-      await redis.set(refreshToken, user._id)
+      await redis.set(refreshToken, user._id, {ex: 60 * 60 * 24 * 31})
       return res.status(200).json({ user, accessToken });
     } catch (error) {
       res.status(500).json(error);
@@ -89,7 +89,7 @@ const authController = {
       });
 
       // Save token
-      await redis.set(refreshToken, user._id)
+      await redis.set(refreshToken, user._id, {ex: 60 * 60 * 24 * 31})
 
       return res.status(200).json({ user, accessToken });
     } catch (error) {
@@ -120,7 +120,7 @@ const authController = {
       const newAccessToken = accessTokenGenerator({ id: decodedToken.userId, admin: savedToken.admin });
       const newRefreshToken = refreshTokenGenerator({ id: decodedToken.userId, admin: savedToken.admin });
 
-      await redis.multi().del(refreshToken).set(newRefreshToken, decodedToken.userId).exec();
+      await redis.multi().del(refreshToken).set(newRefreshToken, decodedToken.userId, {ex: 60 * 60 * 24 * 31}).exec();
 
       res.cookie('refreshToken', newRefreshToken, { sameSite: 'Strict', httpOnly: true, secure: false });
 
