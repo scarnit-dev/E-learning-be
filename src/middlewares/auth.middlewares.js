@@ -14,23 +14,25 @@ const authMiddlewares = {
       res.status(401).json({ message: "You're not authenticated!" });
     }
   },
+
   verifyAdminToken: (req, res, next) => {
     authMiddlewares.verifyToken(req, res, () => {
       if (!req.user.admin) return res.status(401).json({ message: "You're not allow do that!" });
       next();
     });
   },
+  
   getGoogleData: async (req, res, next) => {
     try {
       const access_token = req.headers.authorization.split(' ')[1];
       
-      const data = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+      const googleResponse = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
         headers: {
           Authorization: `Bearer ${access_token}`
         }
       });
-      if (!data.ok) res.status(404).json({message: 'Failed to fetch user infor'});
-      req.data = await data.json();
+      if (!googleResponse.ok) return res.status(404).json({message: 'Failed to fetch user infor'});
+      req.data = await googleResponse.json();
       next();
     } catch (error) {
       res.status(500).json(error);

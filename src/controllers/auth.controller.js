@@ -1,7 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jsonwebtoken from 'jsonwebtoken';
 import { sendOTP } from '../libs/mailer.js';
-import RefreshToken from '../models/RefreshToken.js';
 import User from '../models/User.js';
 import redis from '../libs/redis.js';
 
@@ -34,7 +33,7 @@ const authController = {
       });
 
       // Save token
-      await new RefreshToken({ token: refreshToken, userId: user._id }).save();
+      await redis.set(refreshToken, user._id);
 
       res.status(201).json({ user, accessToken });
     } catch (error) {
@@ -62,7 +61,7 @@ const authController = {
       });
 
       // Save token
-      await new RefreshToken({ token: refreshToken, userId: user._id }).save();
+      await redis.set(refreshToken, user._id)
       return res.status(200).json({ user, accessToken });
     } catch (error) {
       res.status(500).json(error);
@@ -90,7 +89,7 @@ const authController = {
       });
 
       // Save token
-      await new RefreshToken({ token: refreshToken, userId: user._id }).save();
+      await redis.set(refreshToken, user._id)
 
       return res.status(200).json({ user, accessToken });
     } catch (error) {
@@ -105,11 +104,14 @@ const authController = {
       console.log(req.cookies);
       if (!refreshToken) return res.status(404).json({ message: "You're not authenticated!" });
 
-      const savedToken = await RefreshToken.findOne({ token: refreshToken });
+      await redis.exists();
+      
+      // const savedToken = await RefreshToken.findOne({ token: refreshToken });
+      const savedToken = await redis.exists(refreshToken);
       if (!savedToken) return res.status(404).json({ message: "You're not authenticated!" });
 
       const decodedToken = await new Promise((resolve, reject) => {
-        jsonwebtoken.verify(savedToken.token, process.env.REFRESH_SECRET_TOKEN, (err, decodedToken) => {
+        jsonwebtoken.verify(refreshToken, process.env.REFRESH_SECRET_TOKEN, (err, decodedToken) => {
           if (err) reject(err);
           else resolve(decodedToken);
         });
@@ -118,13 +120,12 @@ const authController = {
       const newAccessToken = accessTokenGenerator({ id: decodedToken.userId, admin: savedToken.admin });
       const newRefreshToken = refreshTokenGenerator({ id: decodedToken.userId, admin: savedToken.admin });
 
-      savedToken.token = newRefreshToken;
-      await savedToken.save();
+      await redis.multi().del(refreshToken).set(newRefreshToken, decodedToken.userId).exec();
 
       res.cookie('refreshToken', newRefreshToken, { sameSite: 'Strict', httpOnly: true, secure: false });
 
       return res.status(200).json({ message: 'Successfully!', accessToken: newAccessToken });
-      // })
+
     } catch (error) {
       res.status(500).json(error);
     }
@@ -132,13 +133,14 @@ const authController = {
   // LOG OUT
   logout: async (req, res) => {
     try {
-      await RefreshToken.findOneAndDelete({ token: req.cookies.refreshToken });
+      await redis.del(req.cookies.refreshToken);
       res.clearCookie('refreshToken', { httpOnly: true, path: '/' });
       res.status(200).json({ message: 'Successfully!' });
     } catch (error) {
       res.status(500).json(error);
     }
   },
+
   getOTP: async (req, res) => {
     try {
       const email = req.body.email;
@@ -155,4 +157,3 @@ const authController = {
 };
 export default authController;
 
-// https://chatgpt.com/c/67b60aa1-6be8-8005-b5d8-4dea0ecedf9d
