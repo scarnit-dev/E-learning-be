@@ -133,7 +133,7 @@ const authController = {
   // LOG OUT
   logout: async (req, res) => {
     try {
-      await redis.del(req.cookies.refreshToken);
+      if(req.cookies.refreshToken) await redis.del(req.cookies.refreshToken);
       res.clearCookie('refreshToken', { httpOnly: true, path: '/' });
       res.status(200).json({ message: 'Successfully!' });
     } catch (error) {
